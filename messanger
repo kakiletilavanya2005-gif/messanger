@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Messenger</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-box {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        .messages {
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        .user {
+            color: blue;
+        }
+        .bot {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-box">
+    <h3>Simple Messenger</h3>
+
+    <div class="messages" id="messages"></div>
+
+    <input type="text" id="messageInput" placeholder="Type message..." />
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+    function sendMessage() {
+        var input = document.getElementById("messageInput");
+        var message = input.value;
+
+        if (message === "") return;
+
+        var messagesDiv = document.getElementById("messages");
+
+        // User message
+        var userMsg = document.createElement("p");
+        userMsg.className = "user";
+        userMsg.innerText = "You: " + message;
+        messagesDiv.appendChild(userMsg);
+
+        // Auto reply
+        var botMsg = document.createElement("p");
+        botMsg.className = "bot";
+        botMsg.innerText = "Friend: Hello!";
+        messagesDiv.appendChild(botMsg);
+
+        input.value = "";
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+</script>
+
+</body>
+</html>
+
