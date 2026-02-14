@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1877f2;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Login box */
+        .login-box {
+            width: 300px;
+            background: white;
+            margin: 60px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #145dbf;
+        }
+
+        .signup {
+            margin-top: 10px;
+            color: #1877f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    facebook
+</div>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <input type="text" placeholder="Email or Phone">
+    <input type="password" placeholder="Password">
+
+    <button>Log In</button>
+
+    <p class="signup">Create New Account</p>
+</div>
+
+</body>
+</html>
+
